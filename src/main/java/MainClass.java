@@ -23,7 +23,7 @@ public class MainClass {
             wait.until(ExpectedConditions.textToBe(By.linkText("Быстрый старт"), "Быстрый старт"));
             driver.findElement(By.linkText("Быстрый старт")).click();
             driver.findElement(By.xpath("//input[@onclick=\"$('howtoplay').hide();\"]")).click();
-            //wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("hiddentext")));
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("hiddentext")));
 
             while (!driver.findElement(By.xpath("//*[@id=\"hiddentext\"]")).getAttribute("style").equals("display: none;")) {
                 Thread.sleep(500);
